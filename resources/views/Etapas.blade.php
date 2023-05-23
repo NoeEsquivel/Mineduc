@@ -32,4 +32,14 @@ Implementaciones finales: Implementar dashboard, CNB
 
 
 
-NOVEDADES: por el momento nada.--}}
+NOVEDADES: por el momento nada.
+
+IMPLEMENTACION FINAL
+1.	generará reportes ejecutivos: Reportería
+2.	Las estadísticas deberán gestionarse desde un dashboard de reportes: investigar cómo hacer la plantilla.
+
+Comandos
+php artisan make:model xxxxxxx -r
+
+
+--}}
