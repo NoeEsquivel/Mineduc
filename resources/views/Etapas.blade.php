@@ -16,7 +16,7 @@ PASOS DEL PROYECTO A REALIZAR
 
 escuelas Primaria y Preprimaria
 
-Registrar estudiantes y Mestros
+Registrar estudiantes y Maestros
 
 Estudiantes datos a sacar: Id, Nombre, apellido, Carnet, Grado, CUI
 
