@@ -283,6 +283,11 @@
     </style>
 </head>
 <body>
+    <img style="float: right;
+        margin: 0 auto;
+        max-width: 120%;
+        width: 80%;"src="https://empleos.com.gt/wp-content/uploads/2021/11/ministerio-de-educacion-empleos.jpg"><br>
+
 <section>
 
     <! –” Barra lateral de dashboard en donde estaran las vistas"–>
