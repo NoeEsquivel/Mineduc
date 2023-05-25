@@ -16,7 +16,7 @@ use app\Http\Controllers\AlumnoController;
 */
 
 Route::get('/', function () {
-    return view('layout.home');
+    return view('welcome');
 });
 
 

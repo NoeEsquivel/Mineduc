@@ -44,9 +44,9 @@
 
 {{--                    @endif--}}
 
+{{--                </div>--}}
+{{--            </div>--}}
 
-                </div>
-            </div>
             <h5 class="card-title text-center">Listado de alumnos en el sistema</h5>
             <p>
                 <a href="{{ route("alumnos.createa") }}" class="btn btn-primary">
