@@ -2,9 +2,13 @@
 
 namespace Database\Seeders;
 
+
 use Illuminate\Database\Seeder;
 
 use App\Models\Alumno;
+use App\Models\Titular;
+use App\Models\Catedratico;
+
 
 class DatabaseSeeder extends Seeder
 {
@@ -16,6 +20,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         Alumno::factory(10)->create();
+        Titular::factory(10)->create();
         // \App\Models\User::factory(10)->create();
     }
 }

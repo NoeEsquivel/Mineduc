@@ -16,10 +16,10 @@ class AlumnoFactory extends Factory
         return [
             'nombre'=> $this->faker->name,
             'apellido'=> $this->faker->name,
-            'no_carnet'=> $this->faker->name,
-            'cui'=> $this->faker->name,
+            'no_carnet'=> $this->faker->numberBetween(1, 100),
+            'cui'=> $this->faker->randomNumber(),
             'fecha_nacimiento'=> $this->faker->date,
-            'grado'=> $this->faker->name,
+            'grado'=> $this->faker->company,
         ];
     }
 }

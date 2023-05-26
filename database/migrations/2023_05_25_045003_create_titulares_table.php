@@ -15,6 +15,14 @@ class CreateTitularesTable extends Migration
     {
         Schema::create('titulares', function (Blueprint $table) {
             $table->id();
+            $table->string('nombre');
+            $table->string('apellido');
+            $table->integer('cui');
+            $table->string('telefono');
+            $table->string('email');
+            $table->string('direccion');
+            $table->string('municipio');
+            $table->string('departamento');
             $table->timestamps();
         });
     }

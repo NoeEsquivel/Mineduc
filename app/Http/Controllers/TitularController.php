@@ -7,79 +7,83 @@ use Illuminate\Http\Request;
 
 class TitularController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+
+    public function indext()
+
     {
-        //
+        $datos = Titular::orderBy('nombre', 'asc')->paginate(25);
+        return view('iniciot', compact('datos'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+
+    public function createt()
     {
-        //
+        //el formulario donde nosotros agregamos datos
+
+        return view('agregar-encargado');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+
+    public function storet(Request $request)
     {
-        //
+
+        //Sirve para guardar datos en la base de datos
+        $titulares = new Titular();
+        $titulares->paterno = $request->post('paterno');
+        $titulares->materno = $request->post('materno');
+        $titulares->cui = $request->post('cui');
+        $titulares->telefono = $request->post('telefono');
+        $titulares->email = $request->post('email');
+        $titulares->direccion = $request->post('direccion');
+        $titulares->municipio = $request->post('municipio');
+        $titulares->departamento = $request->post('departamento');
+        $titulares->save();
+
+        return redirect()->route("titulares.indext")->with("success", "Agregado con exito!");
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Titular  $titular
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Titular $titular)
+
+    public function showt($id)
     {
-        //
+        //Servira para obtener un registro de nuestra tabla
+        $titulares = Titular::find($id);
+        return view("eliminar-encargado", compact('titulares'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Titular  $titular
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Titular $titular)
+    public function editt($id)
     {
-        //
+        //Este método nos sirve para traer los datos que se van a editar
+        //y los coloca en un formulario"
+        $titulares = Titular::find($id);
+        return view("actualizar-encargado", compact('titulares'));
+        //echo $id;
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Titular  $titular
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Titular $titular)
+
+    public function updatet(Request $request, $id)
     {
-        //
+        //Este método actualiza los datos en la base de datos
+        $titulares = Titular::find($id);
+        $titulares->paterno = $request->post('paterno');
+        $titulares->materno = $request->post('materno');
+        $titulares->cui = $request->post('cui');
+        $titulares->telefono = $request->post('telefono');
+        $titulares->email = $request->post('email');
+        $titulares->direccion = $request->post('direccion');
+        $titulares->municipio = $request->post('municipio');
+        $titulares->departamento = $request->post('departamento');
+        $titulares->save();
+
+        return redirect()->route("titulares.indext")->with("success", "Actualizado con exito!");
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Titular  $titular
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Titular $titular)
+
+    public function destroyt($id)
     {
-        //
+        //Elimina un registro
+        $titulares = Titular::find($id);
+        $titulares->delete();
+        return redirect()->route("titulares.indext")->with("success", "Eliminado con exito!");
+
     }
 }

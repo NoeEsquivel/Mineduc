@@ -58,7 +58,7 @@
 {{--                </a>--}}
 
 {{--                <a href="{{ route("camiones.createc") }}" class="btn btn-primary">--}}
-{{--                    <span class="fas fa-user-plus"></span>  Agregar nuevo titular--}}
+{{--                    <span class="fas fa-user-plus"></span>  Agregar nuevo encargado--}}
 {{--                </a>--}}
 
 {{--                <a href="{{ route("predios.createp") }}" class="btn btn-primary">--}}

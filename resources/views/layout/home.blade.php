@@ -42,7 +42,7 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item" href="{{ route("alumnos.indexa") }}">Alumnos</a></li>
-{{--                            <li><a class="dropdown-item" href="{{ route("camiones.indexc") }}">Camiones</a></li>--}}
+                            <li><a class="dropdown-item" href="{{ route("titulares.indext") }}">Titulares</a></li>
 {{--                            <li><a class="dropdown-item" href="{{ route("personas.index") }}">Personas</a></li>--}}
 {{--                            <li><a class="dropdown-item" href="{{ route("predios.indexp") }}">Predios</a></li>--}}
 {{--                            <li><a class="dropdown-item" href="{{ route("tmercancias.indextm") }}">Tipo_mercancia</a></li>--}}
@@ -59,6 +59,13 @@
 <div class="container">
     <br><br>
     @yield('contenidoa')
+    @yield('alert')
+
+</div>
+
+<div class="container">
+    <br><br>
+    @yield('contenidot')
     @yield('alert')
 
 </div>
