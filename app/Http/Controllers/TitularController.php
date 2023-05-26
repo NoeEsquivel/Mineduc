@@ -12,7 +12,7 @@ class TitularController extends Controller
 
     {
         $datos = Titular::orderBy('nombre', 'asc')->paginate(25);
-        return view('iniciot', compact('datos'));
+        return view('titular/inicio-titular', compact('datos'));
     }
 
 
@@ -20,7 +20,7 @@ class TitularController extends Controller
     {
         //el formulario donde nosotros agregamos datos
 
-        return view('agregar-encargado');
+        return view('titular/agregar-titular');
     }
 
 
@@ -29,8 +29,8 @@ class TitularController extends Controller
 
         //Sirve para guardar datos en la base de datos
         $titulares = new Titular();
-        $titulares->paterno = $request->post('paterno');
-        $titulares->materno = $request->post('materno');
+        $titulares->nombre = $request->post('nombre');
+        $titulares->apellido = $request->post('apellido');
         $titulares->cui = $request->post('cui');
         $titulares->telefono = $request->post('telefono');
         $titulares->email = $request->post('email');
@@ -47,7 +47,7 @@ class TitularController extends Controller
     {
         //Servira para obtener un registro de nuestra tabla
         $titulares = Titular::find($id);
-        return view("eliminar-encargado", compact('titulares'));
+        return view("titular/eliminar-titular", compact('titulares'));
     }
 
     public function editt($id)
@@ -55,7 +55,7 @@ class TitularController extends Controller
         //Este método nos sirve para traer los datos que se van a editar
         //y los coloca en un formulario"
         $titulares = Titular::find($id);
-        return view("actualizar-encargado", compact('titulares'));
+        return view("titular/actualizar-titular", compact('titulares'));
         //echo $id;
     }
 
@@ -64,8 +64,8 @@ class TitularController extends Controller
     {
         //Este método actualiza los datos en la base de datos
         $titulares = Titular::find($id);
-        $titulares->paterno = $request->post('paterno');
-        $titulares->materno = $request->post('materno');
+        $titulares->nombre = $request->post('nombre');
+        $titulares->apellido = $request->post('apellido');
         $titulares->cui = $request->post('cui');
         $titulares->telefono = $request->post('telefono');
         $titulares->email = $request->post('email');

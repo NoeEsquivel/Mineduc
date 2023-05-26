@@ -15,11 +15,11 @@
                 <label for="">Apellido</label>
                 <input type="text" name="apellido" class="form-control" required>
                 <label for="">CUI</label>
-                <input type="text" name="cui" class="form-control" required>
+                <input type="number" name="cui" class="form-control" required>
                 <label for="">Telefono</label>
-                <input type="date" name="telefono" class="form-control" required>
+                <input type="tel" name="telefono" class="form-control" required>
                 <label for="">Email</label>
-                <input type="text" name="email" class="form-control" required>
+                <input type="email" name="email" class="form-control" required>
                 <label for="">Direccion</label>
                 <input type="text" name="direccion" class="form-control" required>
                 <label for="">Municipio</label>

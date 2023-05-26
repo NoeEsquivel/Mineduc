@@ -16,7 +16,7 @@ class TitularFactory extends Factory
         return [
             'nombre'=> $this->faker->name,
             'apellido'=> $this->faker->name,
-            'cui'=> $this->faker->userName(1, 100),
+            'cui'=> $this->faker->numberBetween(1, 100),
             'telefono'=> $this->faker->phoneNumber(),
             'email'=> $this->faker->email,
             'direccion'=> $this->faker->address,

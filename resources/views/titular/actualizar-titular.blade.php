@@ -16,15 +16,17 @@
                 <label for="">Apellido</label>
                 <input type="text" name="apellido" class="form-control" required value="{{$titulares->apellido}}">
                 <label for="">CUI</label>
-                <input type="text" name="cui" class="form-control" required value="{{$titulares->cui}}">
+                <input type="number" name="cui" class="form-control" required value="{{$titulares->cui}}">
                 <label for="">Telefono</label>
-                <input type="text" name="telefono" class="form-control" required value="{{$titulares->telefono}}">
+                <input type="tel" name="telefono" class="form-control" required value="{{$titulares->telefono}}">
                 <label for="">Email</label>
-                <input type="text" name="email" class="form-control" required value="{{$titulares->email}}">
-                label for="">Direccion</label>
+                <input type="email" name="email" class="form-control" required value="{{$titulares->email}}">
+                <label for="">Direccion</label>
                 <input type="text" name="direccion" class="form-control" required value="{{$titulares->direccion}}">
-                label for="">Municipio</label>
+                <label for="">Municipio</label>
                 <input type="text" name="municipio" class="form-control" required value="{{$titulares->municipio}}">
+                <label for="">Departamento</label>
+                <input type="text" name="departamento" class="form-control" required value="{{$titulares->departamento}}">
 
                 <br>
                 <a href="{{ route("titulares.indext") }}" class="btn btn-info">
