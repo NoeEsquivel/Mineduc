@@ -43,6 +43,7 @@
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item" href="{{ route("alumnos.indexa") }}">Alumnos</a></li>
                             <li><a class="dropdown-item" href="{{ route("titulares.indext") }}">Titulares</a></li>
+                            <li><a class="dropdown-item" href="{{ route("catedraticos.indexc") }}">Catedraticos</a></li>
 {{--                            <li><a class="dropdown-item" href="{{ route("personas.index") }}">Personas</a></li>--}}
 {{--                            <li><a class="dropdown-item" href="{{ route("predios.indexp") }}">Predios</a></li>--}}
 {{--                            <li><a class="dropdown-item" href="{{ route("tmercancias.indextm") }}">Tipo_mercancia</a></li>--}}
@@ -70,6 +71,12 @@
 
 </div>
 
+<div class="container">
+    <br><br>
+    @yield('contenidoc')
+    @yield('alert')
+
+</div>
 
 
 <!-- Option 1: Bootstrap Bundle with Popper -->

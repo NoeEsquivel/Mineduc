@@ -42,6 +42,9 @@ Comandos
 php artisan make:model xxxxxxx -r
 
 
+1. En las actualizaciones ahi un label, posible error
+2. en los factory el cui varia
+3. No se anadieron secciones
 --}}
 
 Hola

@@ -15,6 +15,16 @@ class CreateCatedraticosTable extends Migration
     {
         Schema::create('catedraticos', function (Blueprint $table) {
             $table->id();
+            $table->string('nombre');
+            $table->string('apellido');
+            $table->string('codigoid');
+            $table->string('cui');
+            $table->string('email');
+            $table->string('direccion');
+            $table->string('telefono');
+            $table->string('grado');
+            $table->string('departamento');
+
             $table->timestamps();
         });
     }

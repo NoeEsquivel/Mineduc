@@ -303,7 +303,7 @@
             <li class="active"><a href=""><i class=""></i> Inicio</a></li>
             <li><a href="/indexa" ><i class=""></i> Alumnos</a></li>
             <li><a href="/indext"><i class=""></i> Titulares</a></li>
-            <li><a href="#"><i class=""></i> Catedraticos</a></li>
+            <li><a href="/indexc"><i class=""></i> Catedraticos</a></li>
             <li><a href="#"><i class=""></i> Cursos</a></li>
             <li><a href="#"><i class=""></i> Grados escolares</a></li>
 

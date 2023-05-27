@@ -12,74 +12,81 @@ class CatedraticoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function indexc()
     {
-        //
+        $datos = Catedratico::orderBy('nombre', 'asc')->paginate(25);
+        return view('catedratico/inicio-catedratico', compact('datos'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+
+    public function createc()
     {
-        //
+        //el formulario donde nosotros agregamos datos
+
+        return view('catedratico/agregar-catedratico');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    public function storec(Request $request)
     {
-        //
+        //Sirve para guardar datos en la base de datos
+        $catedraticos = new Catedratico();
+        $catedraticos->nombre = $request->post('nombre');
+        $catedraticos->apellido = $request->post('apellido');
+        $catedraticos->codigoid = $request->post('codigoid');
+        $catedraticos->cui = $request->post('cui');
+        $catedraticos->email = $request->post('email');
+        $catedraticos->direccion = $request->post('direccion');
+        $catedraticos->telefono = $request->post('telefono');
+        $catedraticos->grado = $request->post('grado');
+        $catedraticos->departamento = $request->post('departamento');
+        $catedraticos->save();
+
+        return redirect()->route("catedraticos.indexc")->with("success", "Agregado con exito!");
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Catedratico  $catedratico
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Catedratico $catedratico)
+
+    public function showc($id)
     {
-        //
+        //Servira para obtener un registro de nuestra tabla
+        $catedraticos = Catedratico::find($id);
+        return view("catedratico/eliminar-catedratico", compact('catedraticos'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Catedratico  $catedratico
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Catedratico $catedratico)
+
+    public function editc($id)
     {
-        //
+        //Este método nos sirve para traer los datos que se van a editar
+        //y los coloca en un formulario"
+        $catedraticos = Catedratico::find($id);
+        return view("catedratico/actualizar-catedratico", compact('catedraticos'));
+
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Catedratico  $catedratico
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Catedratico $catedratico)
+
+    public function updatec(Request $request, $id)
     {
-        //
+        //Este método actualiza los datos en la base de datos
+        $catedraticos = Catedratico::find($id);
+        $catedraticos->nombre = $request->post('nombre');
+        $catedraticos->apellido = $request->post('apellido');
+        $catedraticos->codigoid = $request->post('codigoid');
+        $catedraticos->cui = $request->post('cui');
+        $catedraticos->email = $request->post('email');
+        $catedraticos->direccion = $request->post('direccion');
+        $catedraticos->telefono = $request->post('telefono');
+        $catedraticos->grado = $request->post('grado');
+        $catedraticos->departamento = $request->post('departamento');
+        $catedraticos->save();
+
+        return redirect()->route("catedraticos.indexc")->with("success", "Actualizado con exito!");
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Catedratico  $catedratico
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Catedratico $catedratico)
+
+    public function destroyc($id)
     {
-        //
+        //Elimina un registro
+        $catedraticos = Catedratico::find($id);
+        $catedraticos->delete();
+        return redirect()->route("catedraticos.indexc")->with("success", "Eliminado con exito!");
     }
 }

@@ -38,3 +38,12 @@ Route::get('/editt/{id}', [\App\Http\Controllers\TitularController::class, 'edit
 Route::put('/updatet/{id}', [\App\Http\Controllers\TitularController::class, 'updatet'])->name('titulares.updatet');
 Route::get('/showt/{id}', [\App\Http\Controllers\TitularController::class, 'showt'])->name('titulares.showt');
 Route::delete('/destroyt/{id}', [\App\Http\Controllers\TitularController::class, 'destroyt'])->name('titulares.destroyt');
+
+//Ruta Catedraticos
+Route::get('/indexc', [\App\Http\Controllers\CatedraticoController::class, 'indexc'])->name('catedraticos.indexc');
+Route::get('/createc', [\App\Http\Controllers\CatedraticoController::class, 'createc'])->name('catedraticos.createc');
+Route::post('/storec', [\App\Http\Controllers\CatedraticoController::class, 'storec'])->name('catedraticos.storec');
+Route::get('/editc/{id}', [\App\Http\Controllers\CatedraticoController::class, 'editc'])->name('catedraticos.editc');
+Route::put('/updatec/{id}', [\App\Http\Controllers\CatedraticoController::class, 'updatec'])->name('catedraticos.updatec');
+Route::get('/showc/{id}', [\App\Http\Controllers\CatedraticoController::class, 'showc'])->name('catedraticos.showc');
+Route::delete('/destroyc/{id}', [\App\Http\Controllers\CatedraticoController::class, 'destroyc'])->name('catedraticos.destroyc');

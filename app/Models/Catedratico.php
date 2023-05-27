@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Catedratico extends Model
 {
+    public $table='catedraticos';
     use HasFactory;
 }
