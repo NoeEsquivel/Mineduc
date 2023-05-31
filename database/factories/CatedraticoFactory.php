@@ -17,7 +17,7 @@ class CatedraticoFactory extends Factory
             'nombre'=> $this->faker->name,
             'apellido'=> $this->faker->name,
             'codigoid'=> $this->faker->numberBetween(1, 100),
-            'cui'=> $this->faker->randomNumber(),
+            'cui'=> $this->faker->numberBetween(1, 100),
             'email'=> $this->faker->email,
             'direccion'=> $this->faker->address,
             'telefono'=> $this->faker->phoneNumber(),

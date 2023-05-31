@@ -42,10 +42,10 @@ Comandos
 php artisan make:model xxxxxxx -r
 
 
-1. En las actualizaciones ahi un label, posible error
-2. en los factory el cui varia
-3. No se anadieron secciones
+1. No se anadieron secciones
+2. nos faltan escuelas con los 22 departamentos y 340 municipios
+3. Para los dastos permanentes (escuela, municipio, departament. etc.) se va a necesitar un modelo, una tabla
+y un seeder.
 --}}
 
-Hola
-sss
+

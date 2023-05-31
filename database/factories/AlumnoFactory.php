@@ -17,7 +17,7 @@ class AlumnoFactory extends Factory
             'nombre'=> $this->faker->name,
             'apellido'=> $this->faker->name,
             'no_carnet'=> $this->faker->numberBetween(1, 100),
-            'cui'=> $this->faker->randomNumber(),
+            'cui'=> $this->faker->numberBetween(1, 100),
             'fecha_nacimiento'=> $this->faker->date,
             'grado'=> $this->faker->company,
         ];

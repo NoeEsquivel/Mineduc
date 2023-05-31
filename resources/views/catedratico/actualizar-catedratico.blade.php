@@ -1,5 +1,3 @@
-<?php
-
 @extends('layout.home')
 
 @section("tituloPagina", "crear un nuevo registro")
@@ -22,13 +20,13 @@
                 <label for="">CUI</label>
                 <input type="text" name="cui" class="form-control" required value="{{$catedraticos->cui}}">
                 <label for="">Email</label>
-                <input type="text" name="email" class="form-control" required value="{{$catedraticos->email}}">
+                <input type="email" name="email" class="form-control" required value="{{$catedraticos->email}}">
                 <label for="">Direccion</label>
-                <input type="date" name="direccion" class="form-control" required value="{{$catedraticos->direccion}}">
+                <input type="text" name="direccion" class="form-control" required value="{{$catedraticos->direccion}}">
                 <label for="">Telefono</label>
-                <input type="text" name="telefono" class="form-control" required value="{{$catedraticos->telefono}}">
+                <input type="tel" name="telefono" class="form-control" required value="{{$catedraticos->telefono}}">
                 <label for="">Grado</label>
-                <input type="text" name="seccion" class="form-control" required value="{{$catedraticos->seccion}}">
+                <input type="text" name="grado" class="form-control" required value="{{$catedraticos->seccion}}">
                 <label for="">Departamento</label>
                 <input type="text" name="departamento" class="form-control" required value="{{$catedraticos->departamento}}">
 

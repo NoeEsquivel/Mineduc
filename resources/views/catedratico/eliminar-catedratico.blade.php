@@ -30,7 +30,7 @@
                         <td>{{ $catedraticos->codigoid }}</td>
                         <td>{{ $catedraticos->cui }}</td>
                         <td>{{ $catedraticos->email }}</td>
-                        <td>{{ $catedraticosm->direccion }}</td>
+                        <td>{{ $catedraticos->direccion }}</td>
                         <td>{{ $catedraticos->telefono }}</td>
                         <td>{{ $catedraticos->grado }}</td>
                         <td>{{ $catedraticos->departamento }}</td>
@@ -38,14 +38,14 @@
                     </tbody>
                 </table>
                 <hr>
-                <form action="{{ route('catedratico.destroyc', $catedraticos->id) }}" method="POST">
+                <form action="{{ route('catedraticos.destroyc', $catedraticos->id) }}" method="POST">
                     @csrf
                     @method('DELETE')
                     <a href="{{ route("catedraticos.indexc") }}" class="btn btn-info">
-                        <span class="fas fa-undo-alt"></span> Regresar
+                        <span class="fas fa-undo-alt"></span>Regresar
                     </a>
                     <button class="btn btn-danger">
-                        <span class="fas fa-user-times"></span>  Eliminar
+                        <span class="fas fa-user-times"></span>Eliminar
                     </button>
 
                 </form>
