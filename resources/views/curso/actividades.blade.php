@@ -1,23 +1,18 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<!DOCTYPE html>
+<html>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    {{--    Esto es para los botones de agregar, eliminar, etc.--}}
-    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
+{{--    Esto es para los botones de agregar, eliminar, etc.--}}
+<script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
 
-    <title>@yield('tituloPagina')</title>
-
-
-</head>
 <body>
-
+<h1>Calendario de Examenes y Actividades De Mayor Relevancia</h1>
 <div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
@@ -53,39 +48,123 @@
         </div>
     </nav>
 </div>
+<head>
+    <title>Clases</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+    </style>
+
+    <style>
+        body {
+            background-image: url('https://3.bp.blogspot.com/-ETSZgDLShME/W4sUqASBTiI/AAAAAAAAFlA/ZeUJIGrBWocBg4u5QMZ7YP2UgJ7hLEh6QCK4BGAYYCw/s1600/LOGO_MINEDUC.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<table>
+    <tr>
+        <th>Examenes y E.N.</th>
+        <th>Fechas</th>
+    </tr>
+    <tr>
+        <td>Bimestre I</td>
 
 
+        <td>24 al 28 de Abril</td>
 
 
-<div class="container">
-    <br><br>
-    @yield('contenidobus')
-    @yield('alert')
-</div>
+    </tr>
+    <tr>
+        <td>Entrega De Notas I</td>
+
+        <td>05 de Mayo</td>
+
+    </tr>
+    <tr>
+        <td>Bimestre II</td>
+
+        <td>17 al 21 de Julio</td>
+
+    <tr>
+        <td>Entrega De Notas II</td>
 
 
-<div class="container">
-    <br><br>
-    @yield('contenidoa')
-    @yield('alert')
-
-</div>
-
-<div class="container">
-    <br><br>
-    @yield('contenidot')
-    @yield('alert')
-
-</div>
-
-<div class="container">
-    <br><br>
-    @yield('contenidoc')
-    @yield('alert')
-
-</div>
+        <td>28 de Julio</td>
 
 
+    </tr>
+    <tr>
+        <td>Bimestre III</td>
+
+        <td>18 al 22 de Septiembre</td>
+
+    </tr>
+    <tr>
+        <td>Entrega De Notas III</td>
+
+        <td>29 de Septiembre</td>
+
+    <tr>
+        <td>Bimestre IV</td>
+
+        <td>06 al 10 de noviembre</td>
+
+    </tr>
+    <tr>
+        <td>Entrega De Notas IV</td>
+
+        <td>22 de Noviembre</td>
+    </tr>
+
+    <tr>
+        <th>Actividades Relevantes</th>
+        <th>Fechas</th>
+    </tr>
+    <tr>
+        <td>Primer Dia De Clases y Acto Civico De Inaguración</td>
+
+
+        <td>20 de Febrero</td>
+
+
+    </tr>
+    <tr>
+        <td>Clausura de Parvulos III</td>
+
+        <td>8 de Diciembre</td>
+
+    </tr>
+    <tr>
+        <td>Clausura de Sexto</td>
+
+        <td>11 de Diciembre</td>
+
+    </tr>
+    <tr>
+        <td>Entrega De Expedientes A Los Padres De Familia
+        </td>
+
+        <td>13 De Diciembre</td>
+
+    </tr>
+    <th>VACACIONES</th>
+
+</table>
 <!-- Option 1: Bootstrap Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
@@ -93,7 +172,6 @@
 
 {{--SweetAlert--}}
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-
 </body>
+
 </html>

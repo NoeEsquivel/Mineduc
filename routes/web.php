@@ -6,6 +6,7 @@ use app\Http\Controllers\AlumnoController;
 use app\Http\Controllers\TitularController;
 use app\Http\Controllers\CatedraticoController;
 use app\Http\Controllers\CursosController;
+use app\Http\Controllers\ActividadesController;
 //use app\Http\Controllers\BuscadorController;
 
 /*
@@ -55,6 +56,7 @@ Route::get('/', function () {    // la / nos lleva a la ruta principal
 
 
     Route::get('/indexcursos', [\App\Http\Controllers\CursosController::class, 'indexcursos'])->name('indexcursos');
+    Route::get('/indexact', [\App\Http\Controllers\ActividadesController::class, 'indexact'])->name('indexact');
 
 
 //

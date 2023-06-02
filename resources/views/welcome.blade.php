@@ -305,7 +305,7 @@
             <li><a href="/indext"><i class=""></i> Titulares</a></li>
             <li><a href="/indexc"><i class=""></i> Catedraticos</a></li>
             <li><a href="/indexcursos"><i class=""></i> Cursos</a></li>
-            <li><a href="#"><i class=""></i> Grados escolares</a></li>
+            <li><a href="/indexact"><i class=""></i> Calendario y Actividades</a></li>
 
 {{--            // Es para el buscador--}}
             <li><a href="/indexb"><i class=""></i>Buscador</a></li>

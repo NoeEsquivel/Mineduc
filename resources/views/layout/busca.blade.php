@@ -47,6 +47,8 @@ if($conn->connect_error){
                             <li><a class="dropdown-item" href="{{ route("titulares.indext") }}">Titulares</a></li>
                             <li><a class="dropdown-item" href="{{ route("catedraticos.indexc") }}">Catedraticos</a></li>
                             <li><a class="dropdown-item" href="{{ route("indexb") }}">Buscador</a></li>
+                            <li><a class="dropdown-item" href="{{ route("indexcursos") }}">Cursos</a></li>
+                            <li><a class="dropdown-item" href="{{ route("indexact") }}">Actividades y Calendario</a></li>
                             {{--                            <li><a class="dropdown-item" href="{{ route("personas.index") }}">Personas</a></li>--}}
                             {{--                            <li><a class="dropdown-item" href="{{ route("predios.indexp") }}">Predios</a></li>--}}
                             {{--                            <li><a class="dropdown-item" href="{{ route("tmercancias.indextm") }}">Tipo_mercancia</a></li>--}}
