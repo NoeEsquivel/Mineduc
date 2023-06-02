@@ -44,16 +44,26 @@
                             <li><a class="dropdown-item" href="{{ route("alumnos.indexa") }}">Alumnos</a></li>
                             <li><a class="dropdown-item" href="{{ route("titulares.indext") }}">Titulares</a></li>
                             <li><a class="dropdown-item" href="{{ route("catedraticos.indexc") }}">Catedraticos</a></li>
-{{--                            <li><a class="dropdown-item" href="{{ route("personas.index") }}">Personas</a></li>--}}
-{{--                            <li><a class="dropdown-item" href="{{ route("predios.indexp") }}">Predios</a></li>--}}
-{{--                            <li><a class="dropdown-item" href="{{ route("tmercancias.indextm") }}">Tipo_mercancia</a></li>--}}
-{{--                            <li><a class="dropdown-item" href="{{ route("mercancias.indexm") }}">Mercancia</a></li>--}}
+                            <li><a class="dropdown-item" href="{{ route("indexb") }}">Buscador</a></li>
+                            {{--                            <li><a class="dropdown-item" href="{{ route("personas.index") }}">Personas</a></li>--}}
+                            {{--                            <li><a class="dropdown-item" href="{{ route("predios.indexp") }}">Predios</a></li>--}}
+                            {{--                            <li><a class="dropdown-item" href="{{ route("tmercancias.indextm") }}">Tipo_mercancia</a></li>--}}
+                            {{--                            <li><a class="dropdown-item" href="{{ route("mercancias.indexm") }}">Mercancia</a></li>--}}
                         </ul>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+</div>
+
+
+
+
+<div class="container">
+    <br><br>
+    @yield('contenidobus')
+    @yield('alert')
 </div>
 
 

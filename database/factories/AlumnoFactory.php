@@ -19,7 +19,7 @@ class AlumnoFactory extends Factory
             'no_carnet'=> $this->faker->numberBetween(1, 100),
             'cui'=> $this->faker->numberBetween(1, 100),
             'fecha_nacimiento'=> $this->faker->date,
-            'grado'=> $this->faker->company,
+            'grado'=> $this->faker->numberBetween(1, 9),
         ];
     }
 }

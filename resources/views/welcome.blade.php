@@ -307,6 +307,9 @@
             <li><a href="#"><i class=""></i> Cursos</a></li>
             <li><a href="#"><i class=""></i> Grados escolares</a></li>
 
+{{--            // Es para el buscador--}}
+            <li><a href="/indexb"><i class=""></i>Buscador</a></li>
+
         </ul>
 
 

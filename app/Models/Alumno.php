@@ -9,4 +9,11 @@ class Alumno extends Model
 {
     public $table='alumnos';
     use HasFactory;
+
+    //Relación uno a muchos (inversa)
+    public function escuela(){
+        return $this->belongsTo('App\Models\Escuela');
+    }
+
+
 }

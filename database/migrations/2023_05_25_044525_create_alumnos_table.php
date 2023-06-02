@@ -20,9 +20,12 @@ class CreateAlumnosTable extends Migration
             $table->string('no_carnet');
             $table->string('cui');
             $table->date('fecha_nacimiento');
-            $table->string('grado');
+            $table->integer('grado');
 
+
+            $table->foreign('grado')->references('grado')->on('escuelas')->onDelete('no action');
             $table->timestamps();
+
         });
     }
 

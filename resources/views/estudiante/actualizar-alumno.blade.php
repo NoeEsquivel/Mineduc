@@ -22,7 +22,7 @@
                 <label for="">Fecha de nacimiento</label>
                 <input type="date" name="fecha_nacimiento" class="form-control" required value="{{$alumnos->fecha_nacimiento}}">
                 <label for="">Grado</label>
-                <input type="text" name="grado" class="form-control" required value="{{$alumnos->grado}}">
+                <input type="number" name="grado" class="form-control" required value="{{$alumnos->grado}}">
 
                 <br>
                 <a href="{{ route("alumnos.indexa") }}" class="btn btn-info">

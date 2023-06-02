@@ -21,7 +21,7 @@ class CreateCatedraticosTable extends Migration
             $table->string('cui');
             $table->string('email');
             $table->string('direccion');
-            $table->integer('telefono');
+            $table->string('telefono');
             $table->string('grado');
             $table->string('departamento');
 

@@ -40,6 +40,7 @@ IMPLEMENTACION FINAL
 
 Comandos
 php artisan make:model xxxxxxx -r
+php artisan migrate:fresh --seed    Borra toda la table de workbench
 
 
 1. No se anadieron secciones

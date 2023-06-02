@@ -21,7 +21,7 @@
                 <label for="">Fecha de nacimiento</label>
                 <input type="date" name="fecha_nacimiento" class="form-control" required>
                 <label for="">Grado</label>
-                <input type="text" name="grado" class="form-control" required>
+                <input type="number" name="grado" class="form-control" required>
                 <br>
                 <a href="{{ route("alumnos.indexa") }}" class="btn btn-info">
                     <span class="fas fa-undo-alt"></span> Regresar
