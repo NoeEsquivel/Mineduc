@@ -23,7 +23,7 @@ class CreateAlumnosTable extends Migration
             $table->integer('grado');
 
 
-            $table->foreign('grado')->references('grado')->on('escuelas')->onDelete('no action');
+//            $table->foreign('grado')->references('grado')->on('escuelas')->onDelete('no action');
             $table->timestamps();
 
         });
