@@ -1,5 +1,5 @@
 <?php
-$conn = new mysqli("127.0.0.1", "root", "root", "mineduc");
+$conn = new mysqli("127.0.0.1", "admin", "admin", "mineduc");
 
 if($conn->connect_error){
     die('Error de conexion ' . $conn->connect_error);
@@ -37,12 +37,7 @@ if($conn->connect_error){
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="/">Inicio</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
-                    </li>
+
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Enlace desplegable
@@ -294,8 +289,8 @@ if(isset($_GET['enviara'])) {
 
 {{--SweetAlert--}}
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-
+        </form>
+        </form>
 </body>
 </html>
 

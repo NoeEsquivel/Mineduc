@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use app\Http\Controllers\AlumnoController;
 use app\Http\Controllers\TitularController;
 use app\Http\Controllers\CatedraticoController;
+use app\Http\Controllers\CursosController;
 //use app\Http\Controllers\BuscadorController;
 
 /*
@@ -52,6 +53,8 @@ Route::get('/', function () {    // la / nos lleva a la ruta principal
 
   Route::get('/indexb', [\App\Http\Controllers\BuscadorController::class, 'indexb'])->name('indexb');
 
+
+    Route::get('/indexcursos', [\App\Http\Controllers\CursosController::class, 'indexcursos'])->name('indexcursos');
 
 
 //
