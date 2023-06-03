@@ -101,7 +101,7 @@ if(isset($_GET['enviar'])) {
     while ($row = $consulta->fetch_array()){
 
 
-        echo $row['idd'].'<center>','<li>','Nombre Del Titular: ';
+        echo $row['id'].'<center>','<li>','Nombre Del Titular: ';
         echo $row['nombre'].'<br>','<center>','<li>','Apellido Del Titular: ';
         echo $row['apellido'].'<br>','<center>','<li>','No. De CUI: ';
         echo $row['cui'].'<br>','<center>','<li>','Telefono: ';
@@ -124,7 +124,7 @@ if(isset($_GET['enviar'])) {
     $consulta = $conn->query("SELECT * FROM titulares WHERE apellido LIKE '%$busqueda%'");
 
     while ($row = $consulta->fetch_array()){
-        echo $row['idd'].'<center>','<li>','Apellido Del Titular: ';
+        echo $row['id'].'<center>','<li>','Apellido Del Titular: ';
         echo $row['apellido'].'<br>','<center>','<li>','Nombre Del Titular: ';
         echo $row['nombre'].'<br>','<center>','<li>','No. De CUI: ';
         echo $row['cui'].'<br>','<center>','<li>','Telefono: ';
@@ -156,7 +156,7 @@ if(isset($_GET['enviara'])) {
     while ($row = $consultaa->fetch_array()){
 
 
-        echo $row['idd'].'<center>','<li>','Nombre Del Estudiante: ';
+        echo $row['id'].'<center>','<li>','Nombre Del Estudiante: ';
         echo $row['nombre'].'<br>','<center>','<li>','Apellido Del Estudiante: ';
         echo $row['apellido'].'<br>','<center>','<li>','No. De Carnet: ';
         echo $row['no_carnet'].'<br>','<center>','<li>','No. De CUI: ';
@@ -182,7 +182,7 @@ if(isset($_GET['enviara'])) {
 
     while ($row = $consultaa->fetch_array()){
 
-        echo $row['idd'].'<center>','<li>','Apellido Del Estudiante: ';
+        echo $row['id'].'<center>','<li>','Apellido Del Estudiante: ';
         echo $row['apellido'].'<br>','<center>','<li>','Nombre Del Estudiante: ';
         echo $row['nombre'].'<br>','<center>','<li>','No. De Carnet: ';
         echo $row['no_carnet'].'<br>','<center>','<li>','No. De CUI: ';
@@ -205,7 +205,7 @@ if(isset($_GET['enviara'])) {
 
 
 
-        echo $row['idd'].'<center>','<li>','Grado: ';
+        echo $row['id'].'<center>','<li>','Grado: ';
         echo $row['grado'].'<br>', '<li>', 'Nombre Del Estudiante: ';
         echo $row['nombre'].'<br>','<center>','<li>','Apellido Del Estudiante: ';
         echo $row['apellido'].'<br>','<center>','<li>','No. De Carnet: ';
@@ -238,7 +238,7 @@ if(isset($_GET['enviara'])) {
         while ($row = $consultac->fetch_array()){
 
 
-            echo $row['idd'].'<center>','<li>','Nombre Del Catedratico: ';
+            echo $row['id'].'<center>','<li>','Nombre Del Catedratico: ';
             echo $row['nombre'].'<br>','<center>','<li>','Apellido Del Catedratico: ';
             echo $row['apellido'].'<br>','<center>','<li>','Codigo ID Del Catedratico: ';
             echo $row['codigoid'].'<br>','<center>','<li>','CUI: ';
@@ -264,7 +264,7 @@ if(isset($_GET['enviara'])) {
         $consultac = $conn->query("SELECT * FROM catedraticos WHERE apellido LIKE '%$busquedac%'");
 
         while ($row = $consultac->fetch_array()){
-            echo $row['idd'].'<center>','<li>','Apellido Del Catedratico: ';
+            echo $row['id'].'<center>','<li>','Apellido Del Catedratico: ';
             echo $row['apellido'].'<br>','<center>','<li>','Nombre Del Catedratico: ';
             echo $row['nombre'].'<br>','<center>','<li>','Codigo ID Del Catedratico: ';
             echo $row['codigoid'].'<br>','<center>','<li>','CUI: ';
@@ -288,7 +288,7 @@ if(isset($_GET['enviara'])) {
 
         while ($row = $consultac->fetch_array()){
 
-            echo $row['idd'].'<center>','<li>','grado: ';
+            echo $row['id'].'<center>','<li>','grado: ';
             echo $row['grado'].'<br>','<center>','<li>','Nombre Del Catedratico: ';
             echo $row['nombre'].'<br>','<center>','<li>','Apellido Del Catedratico: ';
             echo $row['apellido'].'<br>','<center>','<li>','Codigo ID Del Catedratico: ';
