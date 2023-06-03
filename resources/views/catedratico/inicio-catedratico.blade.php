@@ -47,6 +47,21 @@
     {{--                </div>--}}
     {{--            </div>--}}
 
+
+    <style>
+        body {
+
+
+            background-image: url('https://i.pinimg.com/564x/6d/2c/59/6d2c59eac908719257470732dc8c2858.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+
+        }
+
+
+    </style>
+
     <h5 class="card-title text-center">Listado de catedraticos en el sistema</h5>
     <p>
         <a href="{{ route("catedraticos.createc") }}" class="btn btn-primary">

@@ -53,6 +53,24 @@
                     <span class="fas fa-user-plus"></span>  Agregar nuevo alumno
                 </a>
 
+
+                <style>
+                    body {
+
+
+                        background-image: url('https://png.pngtree.com/background/20211215/original/pngtree-chinese-style-border-border-white-simple-style-picture-image_1498005.jpg');
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: center;
+
+
+
+
+                    }
+
+
+
+                </style>
 {{--                <a href="{{ route("transportes.createt") }}" class="btn btn-primary">--}}
 {{--                    <span class="fas fa-user-plus"></span>  Agregar nuevo catedratico--}}
 {{--                </a>--}}

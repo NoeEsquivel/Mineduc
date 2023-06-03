@@ -47,6 +47,25 @@
     {{--                </div>--}}
     {{--            </div>--}}
 
+
+    <style>
+        body {
+
+
+            background-image: url('https://png.pngtree.com/background/20211215/original/pngtree-chinese-style-border-border-white-simple-style-picture-image_1498005.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+
+
+
+
+        }
+
+
+
+    </style>
+
     <h5 class="card-title text-center">Listado de titulares en el sistema</h5>
     <p>
         <a href="{{ route("titulares.createt") }}" class="btn btn-primary">

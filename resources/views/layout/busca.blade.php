@@ -1,5 +1,5 @@
 <?php
-$conn = new mysqli("127.0.0.1", "admin", "admin", "mineduc");
+$conn = new mysqli("127.0.0.1", "root", "1234", "mineduc");
 
 if($conn->connect_error){
     die('Error de conexion ' . $conn->connect_error);
@@ -28,19 +28,19 @@ if($conn->connect_error){
 <div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
+            <img src="https://guatemala.gob.gt/wp-content/uploads/2023/02/Gobierno-de-Guatemala-Dr.-Alejandro-paginas.png"    width="200" height="100">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/">Inicio</a>
+                        <a class="nav-link active" aria-current="page" href="/">INICIO</a>
                     </li>
 
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Enlace desplegable
+                            ENLACE DESPLEGABLE
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item" href="{{ route("alumnos.indexa") }}">Alumnos</a></li>
@@ -63,7 +63,8 @@ if($conn->connect_error){
 
 
 
-<form action="" method="get">
+
+<form action="" method="get" align="center">
     <input type="text" name="busqueda"> <br>
     <input type="submit" name="enviar" value="Titulares">
 
