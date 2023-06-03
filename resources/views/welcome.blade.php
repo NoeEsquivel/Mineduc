@@ -1,354 +1,191 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>MINEDUC</title>
-    <link rel="stylesheet" type="text/css" href="app.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <title></title>
 
-    <! –” CSS PARA EL DASHBOARD"–>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
-        :root{
-        --blue:#0046fd;
-        --white:#fff;
-        --black:#000;
-        --lightblue:#b3bbd1;
-        --gray:#e5e5e5;
-        }
-        *{margin: 0px;  padding: 0px; font-family: 'Montserrat', sans-serif;}
-        body{height: 100vh;}
-        .sidebar{
-        width: 20%;
-        float: left;
-        background: var(--blue);
-        height: 100vh;
-        position: relative;
-        }
-        .main{width: 75%;float: left;height: 90vh; padding: 30px;}
-        .logo{text-align: center;color: var(--white); margin-top: 50px; font-weight: 800;
-        margin-bottom: 50px;}
-        .nav{margin-left: 40px;}
-        .nav li{list-style: none; padding: 16px 19px;}
-        .nav li i{ margin-right: 10px;}
-        .nav li a{color: var(--white); text-decoration: none; font-weight: 600;}
-        .active{
-        background:var(--white);
-        border-radius: 27px;
-        position: relative;
-        }
-        .nav > .active::before, .nav > .active::after {
-        content: "";
-        position: absolute;
-        }
-        .nav > li{
-        border-radius: 60px 0 0 60px;
-        width: 92%;
-        margin-left: -15px;
-        }
-        .nav > .active::before {
-        top: -80px;
-        right: 0px;
-        height: 80px;
-        width: 62px;
-        border-bottom-right-radius: 80px;
-        box-shadow: 0 40px 0 0 var(--white);
-        transform: rotateZ(360deg);
-        }
-        .nav > .active::after {
-        top: 51px;
-        right: 0px;
-        height: 80px;
-        width: 62px;
-        border-top-right-radius: 80px;
-        box-shadow: 0 -40px 0 0 var(--white);
-        transform: rotateZ(360deg);
 
-        }
-        .active a{color: var(--blue)!important;}
-        .social{position: absolute;bottom: 10px; left: 20px;}
-        .social li{
-        list-style: none;
-        float: left;
-        padding: 10px;
-        }
-        .social li a{font-size: 14px; color: var(--white);}
-        .clearfix{clear: both;}
-        .col-6{width: 50%; float: left;}
-        .hicon{margin-right: 20px; font-size: 22px!important;position: relative;}
-        .hicon:nth-child(1):after{
-        content: '';
-        position:absolute;
-        width: 7px;
-        height: 7px;
-        background: red;
-        border-radius: 10px;
-        left: 13px;
-        top: 7px;
-        transform: scale(0.5);
-        box-shadow: 0 0 0 0 rgba(255, 82, 82, 1);
-        animation: pulse-red 2s infinite;
-        cursor: pointer;
 
-        }
-
-        @keyframes pulse-red {
-        0% {
-        transform: scale(0.85);
-        box-shadow: 0 0 0 0 rgba(255, 82, 82, 0.7);
-        }
-
-        70% {
-        transform: scale(1);
-        box-shadow: 0 0 0 25px rgba(255, 82, 82, 0);
-        }
-
-        100% {
-        transform: scale(0.85);
-        box-shadow: 0 0 0 0 rgba(255, 82, 82, 0);
-        }
-        }
-        .user{
-        background:var(--lightblue);
-        padding: 5px;
-        width: 30px;
-        margin-bottom: -11px;
-        border-radius: 5px;
-        cursor: pointer;
-        }
-        .profile-div{
-        background-color: var(--gray);
-        width: 140px;
-        border: 1px solid #ddd;
-        padding: 10px 0px;
-        right: 2%;
-        border-radius: 5px;
-        position: absolute;
-        z-welcome: 9;
-        display: none;
-        top: 84px;
-        text-align: left;
-        }
-        .profile-div:after{
-        content: '';
-        position: absolute;
-        height: 10px;
-        width: 10px;
-        background-color: var(--gray);
-        top: -6px;
-        border-left: 1px solid #ddd;
-        border-top: 1px solid #ddd;
-        transform: rotate(45deg);
-        right: 10%;
-        }
-        .profile-div p{margin: 0px;padding: 10px 20px;}
-        .profile-div p:hover{
-        margin: 0px;
-        padding: 10px 20px;
-        background-color: var(--blue);
-        border-radius: 0px;
-        color: var(--white);
-        }
-        .notification-div{
-        background-color: var(--gray);
-        width: 246px;
-        border: 1px solid #ddd;
-        padding: 10px 0px;
-        right: 9.4%;
-        border-radius: 5px;
-        position: absolute;
-        z-welcome: 9;
-        display: none;
-        top: 84px;
-        text-align: left;
-        }
-        .notification-div:after{
-        content: '';
-        position: absolute;
-        height: 10px;
-        width: 10px;
-        background-color: var(--gray);
-        top: -6px;
-        border-left: 1px solid #ddd;
-        border-top: 1px solid #ddd;
-        transform: rotate(45deg);
-        right: 10%;
-        }
-        .notification-div p{margin: 0px;padding: 10px 20px;}
-        .notification-div p:hover{
-        margin: 0px;
-        padding: 10px 20px;
-        background-color: var(--blue);
-        border-radius: 0px;
-        color: var(--white);
-        }
-        .search{ padding: 5px; display: none; outline: none; border:none;
-        border-bottom: 1px solid black;
-        }
-        table {
-        border-collapse: collapse;
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        table-layout: fixed;
-        border-spacing: 0 15px;
-        }
-
-        table tr {
-        background-color: #f8f8f8;
-        border: 1px solid #ddd!important;
-        padding: .35em;
-        margin-bottom: 10px;
-        }
-
-        table th,
-        table td {
-        padding: 1.5em;
-        text-align: left;
-
-        }
-
-        table th {
-        font-size: .85em;
-        letter-spacing: .1em;
-        text-transform: uppercase;
-        }
-        .tab-img{
-        display: inline-block;
-        width: 30px;
-        vertical-align: middle;
-        border: 1px solid #000;
-        border-radius: 18px;
-        margin-right: 8px;
-        }
-        .ticon{
-        padding: 5px;
-        background: var(--gray);
-        border-radius: 4px;
-        width: 15px;
-        height: 15px;
-        text-align: center;
-        }
-        .pe{
-        content: '';
-        position:absolute;
-        width: 7px;
-        height: 7px;
-        background: red;
-        border-radius: 10px;
-        left: 10px;
-        top: 37px;
-        transform: scale(0.5);
-        box-shadow: 0 0 0 0 rgba(255, 82, 82, 1);
-        animation: pulse-red 2s infinite;
-        cursor: pointer;
-        }
-        .de{
-        content: '';
-        position:absolute;
-        width: 7px;
-        height: 7px;
-        background: green;
-        border-radius: 10px;
-        left: 10px;
-        top: 37px;
-        transform: scale(0.5);
-        box-shadow: 0 0 0 0 rgba(255, 82, 82, 1);
-        animation: pulse-green 2s infinite;
-        cursor: pointer;
-        }
-        @keyframes pulse-green {
-        0% {
-        transform: scale(0.85);
-        box-shadow: 0 0 0 0 rgba(82, 255, 82, 0.7);
-        }
-
-        70% {
-        transform: scale(1);
-        box-shadow: 0 0 0 25px rgba(82, 255, 82, 0);
-        }
-
-        100% {
-        transform: scale(0.85);
-        box-shadow: 0 0 0 0 rgba(82, 255, 82, 0);
-        }
-        }
-        .active-tr{
-        background: var(--blue);
-        color: var(--white);
-        }
-        .active-tr .ticon{
-        background: #e5e5e54f;
-        }
-    </style>
 </head>
 <body>
-    <img style="float: right;
-        margin: 0 auto;
-        max-width: 120%;
-        width: 80%;"src="https://empleos.com.gt/wp-content/uploads/2021/11/ministerio-de-educacion-empleos.jpg"><br>
 
 <section>
-
-    <! –” Barra lateral de dashboard en donde estaran las vistas"–>
-
-
-    <div class="sidebar">
-        <h1 class="logo">MINEDUC</h1>
-
-        <! –” Opciones de la barra lateral"–>
-
-
+    <div class="left-div">
+        <br>
+        <h2 class="logo"><span style="font-weight: 100; ">-MINEDUC-</span></h2>
+        <hr class="hr" />
         <ul class="nav">
-            <li class="active"><a href=""><i class=""></i> Inicio</a></li>
-            <li><a href="/indexa" ><i class=""></i> Alumnos</a></li>
-            <li><a href="/indext"><i class=""></i> Titulares</a></li>
-            <li><a href="/indexc"><i class=""></i> Catedraticos</a></li>
-            <li><a href="/indexcursos"><i class=""></i> Cursos</a></li>
-            <li><a href="/indexact"><i class=""></i> Calendario y Actividades</a></li>
+            <li class="active"><a href=""><i class="fa fa-th-large"></i> Inicio</a></li>
+            <li><a href="/indexa"><i class="fa fa-user"></i> Alumno</a></li>
+            <li><a href="/indext"><i class="fa fa-key"></i> Titulares</a></li>
+            <li><a href="/indexc"><i class="fa fa-desktop"></i> Catedratico</a></li>
+            <li><a href="/indexcursos"><i class="fa fa-gear"></i> Cursos</a></li>
+            <li><a href="/indexact"><i class="fa fa-bullhorn"></i> Calendario/Actividades</a></li>
 
-{{--            // Es para el buscador--}}
-            <li><a href="/indexb"><i class=""></i>Buscador</a></li>
-
+            {{--            // Es para el buscador--}}
+            <li><a href="/indexb"><i class="fa fa-search"></i>Buscador</a></li>
         </ul>
-
-
-
-        <! –” Link de la UMG ya que es proyecto de almunos de la universidad Mariano Galvez de Guatemala“–>
-        <ul class="social">
-            <li><a href="https://www.umg.edu.gt/">Mariano Galvez de Guatemala</a></li>
-
-        </ul>
-
-
+        <br><br>
+        <img src="" class="support">
     </div>
 
-    <! –” Script donde se manejan la forma de interacturar en las opciones “–>
+    <div class="right-div">
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <script>
-        $(document).ready(function(){
-            $(".user").click(function(){
-                $(".profile-div").toggle(1000);
-            });
-            $(".hicon:nth-child(1)").click(function(){
-                $(".notification-div").toggle(1000);
-            });
-            $(".sicon").click(function(){
-                $(".search").toggle(1000);
-            });
+
+        <div id="main">
+            <br>
+            <div class="head">
+                <div class="col-div-6">
+                    <p class="nav"> PROYECTO FINAL - PROGRAMACION III</p>
+                </div>
+
+                <div class="col-div-6">
+
+
+                    <div class="profile">
+
+                        <img src="https://e7.pngegg.com/pngimages/146/551/png-clipart-user-login-mobile-phones-password-user-miscellaneous-blue.png" class="pro-img" />
+                        <p>Bryan<i class="fa fa-ellipsis-v dots" aria-hidden="true"></i></p>
+                        <div class="profile-div">
+                            <p><i class="fa fa-user"></i>   Profile</p>
+                            <p><i class="fa fa-cogs"></i>   Settings</p>
+                            <p><i class="fa fa-power-off"></i>   Log Out</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+
+            <div class="clearfix"></div>
+            <br/><br/><br/>
+
+            <div class="col-div-4-1">
+                <div class="box">
+                    <p class="head-1">Estudiantes</p>
+                    <p class="number">67343</p>
+                    <p class="percent"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 5.674% <span>Since Last Months</span></p>
+                    <i class="fa fa-line-chart box-icon"></i>
+                </div>
+            </div>
+            <div class="col-div-4-1">
+                <div class="box">
+                    <p class="head-1">Catedraticos</p>
+                    <p class="number">2343</p>
+                    <p class="percent" style="color:red!important"><i class="fa fa-long-arrow-down" aria-hidden="true"></i> 5.64% <span>Since Last Months</span></p>
+                    <i class="fa fa-circle-o-notch box-icon"></i>
+                </div>
+            </div>
+            <div class="col-div-4-1">
+                <div class="box">
+                    <p class="head-1">orders</p>
+                    <p class="number">35343</p>
+                    <p class="percent"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 5.674% <span>Since Last Months</span></p>
+                    <i class="fa fa-shopping-bag box-icon"></i>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+            <br/><br/>
+
+
+            <div class="col-div-4-1">
+                <div class="box-1">
+                    <div class="content-box-1">
+                        <p class="head-1">Overview</p>
+                        <br/>
+                        <div class="m-box active1">
+                            <p>Member Profit<br/><span class="no-1">Last Months</span></p>
+                            <span class="no">+2343</span>
+                        </div>
+
+                        <div class="m-box">
+                            <p>Member Profit<br/><span class="no-1">Last Months</span></p>
+                            <span class="no">+2343</span>
+                        </div>
+
+                        <div class="m-box">
+                            <p>Member Profit<br/><span class="no-1">Last Months</span></p>
+                            <span class="no">+2343</span>
+                        </div>
+
+                        <div class="m-box">
+                            <p>Member Profit<br/><span class="no-1">Last Months</span></p>
+                            <span class="no">+2343</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-div-4-1">
+                <div class="box-1">
+                    <div class="content-box-1">
+                        <p class="head-1">Total Sale <span>View All</span></p>
+
+                        <div class="circle-wrap">
+                            <div class="circle">
+                                <div class="mask full">
+                                    <div class="fill"></div>
+                                </div>
+                                <div class="mask half">
+                                    <div class="fill"></div>
+                                </div>
+                                <div class="inside-circle"> 70% </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-div-4-1">
+                <div class="box-1">
+                    <div class="content-box-1">
+                        <p class="head-1">Acitivity <span>View All</span></p>
+                        <br/>
+                        <p class="act-p"><i class="fa fa-circle" ></i> Lorem Ipsum is simply dummy text of the     printing and typesetting industry. </p>
+                        <p class="act-p"><i class="fa fa-circle" style="color:red!important;"></i> Lorem Ipsum is simply dummy text of the     printing and typesetting industry. </p>
+                        <p class="act-p"><i class="fa fa-circle" style="color:green!important;"></i> Lorem Ipsum is simply dummy text of the     printing and typesetting industry. </p>
+                        <p class="act-p"><i class="fa fa-circle" ></i> Lorem Ipsum is simply dummy text of the     printing and typesetting industry. </p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+        </div>
+
+    </div>
+    <div class="clearfix"></div>
+</section>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+        $(".profile p").click(function(){
+            $(".profile-div").toggle();
+
         });
-    </script>
-
-    <script type="text/javascript">
-        $('li').click(function(){
-            $('li').removeClass("active");
-            $(this).addClass("active");
+        $(".noti-icon").click(function(){
+            $(".notification-div").toggle();
         });
-
-    </script>
-    </section>
+    });
+</script>
+<script type="text/javascript">
+    $('li').click(function(){
+        $('li').removeClass("active");
+        $(this).addClass("active");
+    });
+</script>
 </body>
 </html>
