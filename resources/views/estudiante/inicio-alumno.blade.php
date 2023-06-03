@@ -53,6 +53,9 @@
                     <span class="fas fa-user-plus"></span>  Agregar nuevo alumno
                 </a>
 
+                <a href="{{ route("grafica") }}" class="btn btn-primary">
+                    <span class="fa-thin fa-chart-pie-simple"></span>  Gráfica
+                </a>
 
                 <style>
                     body {
@@ -63,12 +66,7 @@
                         background-size: cover;
                         background-position: center;
 
-
-
-
                     }
-
-
 
                 </style>
 {{--                <a href="{{ route("transportes.createt") }}" class="btn btn-primary">--}}

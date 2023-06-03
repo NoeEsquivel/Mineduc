@@ -1,5 +1,11 @@
+<?php
+require_once "../routes/_db.php";
+
+?>
+
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -387,6 +393,8 @@
         }
     </style>
 
+
+
 </head>
 <body>
 
@@ -430,11 +438,11 @@
                     <div class="profile">
 
                         <img src="https://e7.pngegg.com/pngimages/146/551/png-clipart-user-login-mobile-phones-password-user-miscellaneous-blue.png" class="pro-img" />
-                        <p>Bryan<i class="fa fa-ellipsis-v dots" aria-hidden="true"></i></p>
+                        <p>UMG<i class="fa fa-ellipsis-v dots" aria-hidden="true"></i></p>
                         <div class="profile-div">
-                            <p><i class="fa fa-user"></i>   Profile</p>
-                            <p><i class="fa fa-cogs"></i>   Settings</p>
-                            <p><i class="fa fa-power-off"></i>   Log Out</p>
+                            <p><i class="fa fa-user"></i>    Usuario</p>
+                            <p><i class="fa fa-cogs"></i>    Ajustes</p>
+                            <p><i class="fa fa-power-off"></i>    Cerrar sesión</p>
                         </div>
                     </div>
                 </div>
@@ -445,28 +453,71 @@
             <div class="clearfix"></div>
             <br/><br/><br/>
 
+
+
+
+
+
             <div class="col-div-4-1">
                 <div class="box">
                     <p class="head-1">Estudiantes</p>
-                    <p class="number">67343</p>
-                    <p class="percent"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 5.674% <span>Since Last Months</span></p>
+
+                    <?php
+                    $SQL = "SELECT COUNT(*) id FROM  alumnos";
+                    $consulta = mysqli_query($conexion, $SQL);
+                    while ($resultado = mysqli_fetch_assoc($consulta)){
+                        echo "[" .$resultado['id']."]";
+                    }
+
+                    ?>
+
+                    <br><br>
+                    <p class="percent"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 5.674% <span>Incremento</span></p>
                     <i class="fa fa-line-chart box-icon"></i>
                 </div>
             </div>
+
+
+
             <div class="col-div-4-1">
                 <div class="box">
                     <p class="head-1">Catedraticos</p>
-                    <p class="number">2343</p>
-                    <p class="percent" style="color:red!important"><i class="fa fa-long-arrow-down" aria-hidden="true"></i> 5.64% <span>Since Last Months</span></p>
+
+                    <?php
+                    $SQL = "SELECT COUNT(*) id FROM  catedraticos";
+                    $consulta = mysqli_query($conexion, $SQL);
+                    while ($resultado = mysqli_fetch_assoc($consulta)){
+                        echo "[" .$resultado['id']."]";
+                    }
+
+                    ?>
+
+<br><br>
+                    <p class="percent" ><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 6.64% <span>Incremento</span></p>
                     <i class="fa fa-circle-o-notch box-icon"></i>
                 </div>
             </div>
+
+
+
             <div class="col-div-4-1">
                 <div class="box">
-                    <p class="head-1">orders</p>
-                    <p class="number">35343</p>
-                    <p class="percent"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 5.674% <span>Since Last Months</span></p>
-                    <i class="fa fa-shopping-bag box-icon"></i>
+                    <p class="head-1">Titulares</p>
+
+                    <?php
+                    $SQL = "SELECT COUNT(*) id FROM titulares";
+                    $consulta = mysqli_query($conexion, $SQL);
+                    while ($resultado = mysqli_fetch_assoc($consulta)){
+                        echo "[" .$resultado['id']."]";
+                    }
+
+                    ?>
+
+
+                    <br><br>
+
+                    <p class="percent"><i class="fa fa-long-arrow-up" aria-hidden="true"></i> 5.674% <span>Incremento</span></p>
+                    <i class="fa fa-circle-o-notch box-icon"></i>
                 </div>
             </div>
 
@@ -477,59 +528,113 @@
             <div class="col-div-4-1">
                 <div class="box-1">
                     <div class="content-box-1">
-                        <p class="head-1">Overview</p>
+                        <p class="head-1">Preguntas frecuentes</p>
                         <br/>
                         <div class="m-box active1">
-                            <p>Member Profit<br/><span class="no-1">Last Months</span></p>
-                            <span class="no">+2343</span>
+                            <p>Carreras Autorizadas<br/></p>
+
                         </div>
 
                         <div class="m-box">
-                            <p>Member Profit<br/><span class="no-1">Last Months</span></p>
-                            <span class="no">+2343</span>
+                            <p>Búsqueda de establecimientos<br/></p>
+
                         </div>
 
                         <div class="m-box">
-                            <p>Member Profit<br/><span class="no-1">Last Months</span></p>
-                            <span class="no">+2343</span>
+                            <p>Directorio MINEDUC<br/></p>
+
                         </div>
 
                         <div class="m-box">
-                            <p>Member Profit<br/><span class="no-1">Last Months</span></p>
-                            <span class="no">+2343</span>
+                            <p>Oficina Nacional de Servicio Civil - ONSEC<br/></p>
+
                         </div>
+
+                        <div class="m-box">
+                            <p>Estado de contrato Maestros 021<br/></p>
+
+                        </div>
+
 
                     </div>
                 </div>
             </div>
+
+
+
             <div class="col-div-4-1">
+
                 <div class="box-1">
                     <div class="content-box-1">
-                        <p class="head-1">Total Sale <span>View All</span></p>
 
-                        <div class="circle-wrap">
-                            <div class="circle">
-                                <div class="mask full">
-                                    <div class="fill"></div>
-                                </div>
-                                <div class="mask half">
-                                    <div class="fill"></div>
-                                </div>
-                                <div class="inside-circle"> 70% </div>
-                            </div>
+
+                        <div class="container">
+                        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+                        <script type="text/javascript">
+                            google.charts.load('current', {'packages':['corechart']});
+                            google.charts.setOnLoadCallback(drawChart);
+
+                            function drawChart() {
+
+
+                                var data = google.visualization.arrayToDataTable([
+                                    ['Task', 'Hours per Day'],
+                                    <?php
+                                    $SQL = "SELECT COUNT(*) id FROM alumnos";
+                                    $consulta = mysqli_query($conexion, $SQL);
+                                    while ($resultado = mysqli_fetch_assoc($consulta)){
+                                        echo "['" .$resultado['id']."', " .$resultado['id']."],";
+                                    }
+
+
+                                    $SQL = "SELECT COUNT(*) id FROM catedraticos";
+                                    $consulta = mysqli_query($conexion, $SQL);
+                                    while ($resultado = mysqli_fetch_assoc($consulta)){
+                                        echo "['" .$resultado['id']."', " .$resultado['id']."],";
+                                    }
+
+                                    $SQL = "SELECT COUNT(*) id FROM titulares";
+                                    $consulta = mysqli_query($conexion, $SQL);
+                                    while ($resultado = mysqli_fetch_assoc($consulta)){
+                                        echo "['" .$resultado['id']."', " .$resultado['id']."],";
+                                    }
+
+                                    ?>
+                                ]);
+
+                                var options = {
+                                    title: 'Total de inscritos'
+                                };
+
+                                var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+                                chart.draw(data, options);
+                            }
+                        </script>
+
+                            <div id="piechart" style="width: 320px; height: 285px;" ></div>
+
+
                         </div>
+
+
+
+
                     </div>
                 </div>
             </div>
+
+
+
             <div class="col-div-4-1">
                 <div class="box-1">
                     <div class="content-box-1">
-                        <p class="head-1">Acitivity <span>View All</span></p>
+                        <p class="head-1">Valores<span>View All</span></p>
                         <br/>
-                        <p class="act-p"><i class="fa fa-circle" ></i> Lorem Ipsum is simply dummy text of the     printing and typesetting industry. </p>
-                        <p class="act-p"><i class="fa fa-circle" style="color:red!important;"></i> Lorem Ipsum is simply dummy text of the     printing and typesetting industry. </p>
-                        <p class="act-p"><i class="fa fa-circle" style="color:green!important;"></i> Lorem Ipsum is simply dummy text of the     printing and typesetting industry. </p>
-                        <p class="act-p"><i class="fa fa-circle" ></i> Lorem Ipsum is simply dummy text of the     printing and typesetting industry. </p>
+                        <p class="act-p"><i class="fa fa-circle" ></i> Responsabilidad </p>
+                        <p class="act-p"><i class="fa fa-circle" style="color:red!important;"></i> Honestidad </p>
+                        <p class="act-p"><i class="fa fa-circle" style="color:green!important;"></i> Colaboración </p>
+                        <p class="act-p"><i class="fa fa-circle" ></i> Perseverancia </p>
 
                     </div>
                 </div>
@@ -564,5 +669,12 @@
         $(this).addClass("active");
     });
 </script>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </body>
 </html>

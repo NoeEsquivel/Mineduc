@@ -58,6 +58,7 @@ Route::get('/', function () {    // la / nos lleva a la ruta principal
     Route::get('/indexcursos', [\App\Http\Controllers\CursosController::class, 'indexcursos'])->name('indexcursos');
     Route::get('/indexact', [\App\Http\Controllers\ActividadesController::class, 'indexact'])->name('indexact');
 
+ Route::get('/grafica', [\App\Http\Controllers\GraficaController::class, 'grafica'])->name('grafica');
 
 //
 //Route::post('/indexb', [\App\Http\Controllers\BuscadorController::class, 'indexb'])->name('alumnos.indexb');
