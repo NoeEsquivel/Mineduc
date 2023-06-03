@@ -396,6 +396,7 @@
         <h2 class="logo"><span style="font-weight: 100; ">-MINEDUC-</span></h2>
         <hr class="hr" />
         <ul class="nav">
+            {{--           Opciones de navbar lateral para navegar dentro de vistas--}}
             <li class="active"><a href=""><i class="fa fa-th-large"></i> Inicio</a></li>
             <li><a href="/indexa"><i class="fa fa-user"></i> Alumno</a></li>
             <li><a href="/indext"><i class="fa fa-key"></i> Titulares</a></li>
@@ -407,7 +408,7 @@
             <li><a href="/indexb"><i class="fa fa-search"></i>Buscador</a></li>
         </ul>
         <br><br>
-        <img src="" class="support">
+        <img src="https://umg.edu.gt/assets/umg.png" class="support">
     </div>
 
     <div class="right-div">
@@ -424,6 +425,7 @@
 
                 <div class="col-div-6">
 
+                    {{--            // Perfil sobre sitio web de MINEDUC--}}
 
                     <div class="profile">
 
@@ -439,6 +441,7 @@
                 <div class="clearfix"></div>
             </div>
 
+            {{--            // Cajas en donde colocaremos graficas, o material de contenido sobre proyecto MINEDUC--}}
             <div class="clearfix"></div>
             <br/><br/><br/>
 
