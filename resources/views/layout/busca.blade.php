@@ -1,5 +1,5 @@
 <?php
-$conn = new mysqli("127.0.0.1", "root", "admin*", "mineduc");
+$conn = new mysqli("127.0.0.1", "admin", "admin", "mineduc");
 
 if($conn->connect_error){
     die('Error de conexion ' . $conn->connect_error);
@@ -101,15 +101,15 @@ if(isset($_GET['enviar'])) {
     while ($row = $consulta->fetch_array()){
 
 
-        echo $row['id'].'<br>';
-        echo $row['nombre'].'<br>';
-        echo $row['apellido'].'<br>';
-        echo $row['cui'].'<br>';
-        echo $row['telefono'].'<br>';
-        echo $row['email'].'<br>';
-        echo $row['direccion'].'<br>';
-        echo $row['municipio'].'<br>';
-        echo $row['departamento'].'<br>';
+        echo $row['idd'].'<center>','<li>','Nombre Del Titular: ';
+        echo $row['nombre'].'<br>','<center>','<li>','Apellido Del Titular: ';
+        echo $row['apellido'].'<br>','<center>','<li>','No. De CUI: ';
+        echo $row['cui'].'<br>','<center>','<li>','Telefono: ';
+        echo $row['telefono'].'<br>','<center>','<li>','Email: ';
+        echo $row['email'].'<br>','<center>','<li>','Direccion: ';
+        echo $row['direccion'].'<br>','<center>','<li>','Municipio: ';
+        echo $row['municipio'].'<br>','<center>','<li>','Departamento: ';
+        echo $row['departamento'].'<br>','<br>';
 
 
     }
@@ -124,7 +124,15 @@ if(isset($_GET['enviar'])) {
     $consulta = $conn->query("SELECT * FROM titulares WHERE apellido LIKE '%$busqueda%'");
 
     while ($row = $consulta->fetch_array()){
-        echo $row['apellido'].'<br>';
+        echo $row['idd'].'<center>','<li>','Apellido Del Titular: ';
+        echo $row['apellido'].'<br>','<center>','<li>','Nombre Del Titular: ';
+        echo $row['nombre'].'<br>','<center>','<li>','No. De CUI: ';
+        echo $row['cui'].'<br>','<center>','<li>','Telefono: ';
+        echo $row['telefono'].'<br>','<center>','<li>','Email: ';
+        echo $row['email'].'<br>','<center>','<li>','Direccion: ';
+        echo $row['direccion'].'<br>','<center>','<li>','Municipio: ';
+        echo $row['municipio'].'<br>','<center>','<li>','Departamento: ';
+        echo $row['departamento'].'<br>','<br>';
     }
 }
 
@@ -148,18 +156,19 @@ if(isset($_GET['enviara'])) {
     while ($row = $consultaa->fetch_array()){
 
 
-        echo $row['id'].'<br>';
-        echo $row['nombre'].'<br>';
-        echo $row['apellido'].'<br>';
-        echo $row['no_carnet'].'<br>';
-        echo $row['cui'].'<br>';
-        echo $row['fecha_nacimiento'].'<br>';
-        echo $row['grado'].'<br>';
+        echo $row['idd'].'<center>','<li>','Nombre Del Estudiante: ';
+        echo $row['nombre'].'<br>','<center>','<li>','Apellido Del Estudiante: ';
+        echo $row['apellido'].'<br>','<center>','<li>','No. De Carnet: ';
+        echo $row['no_carnet'].'<br>','<center>','<li>','No. De CUI: ';
+        echo $row['cui'].'<br>','<center>','<li>','Fecha De Nacimiento: ';
+        echo $row['fecha_nacimiento'].'<br>','<center>','<li>','Grado: ';
+        echo $row['grado'].'<br>','<br>';
 //        echo $row['municipio'].'<br>';
 //        echo $row['departamento'].'<br>';
 
 
     }
+
 }
 
 ?>
@@ -172,7 +181,14 @@ if(isset($_GET['enviara'])) {
     $consultaa = $conn->query("SELECT * FROM alumnos WHERE apellido LIKE '%$busquedaa%'");
 
     while ($row = $consultaa->fetch_array()){
-        echo $row['apellido'].'<br>';
+
+        echo $row['idd'].'<center>','<li>','Apellido Del Estudiante: ';
+        echo $row['apellido'].'<br>','<center>','<li>','Nombre Del Estudiante: ';
+        echo $row['nombre'].'<br>','<center>','<li>','No. De Carnet: ';
+        echo $row['no_carnet'].'<br>','<center>','<li>','No. De CUI: ';
+        echo $row['cui'].'<br>','<center>','<li>','Fecha De Nacimiento: ';
+        echo $row['fecha_nacimiento'].'<br>','<center>','<li>','Grado: ';
+        echo $row['grado'].'<br>','<br>';
     }
 }
 ?>
@@ -186,15 +202,16 @@ if(isset($_GET['enviara'])) {
     $consultaa = $conn->query("SELECT * FROM alumnos WHERE grado LIKE '%$busquedaa%'");
 
     while ($row = $consultaa->fetch_array()){
-        echo $row['grado'].'<br>';
 
 
-        echo $row['id'].'<br>';
-        echo $row['nombre'].'<br>';
-        echo $row['apellido'].'<br>';
-        echo $row['no_carnet'].'<br>';
-        echo $row['cui'].'<br>';
-        echo $row['fecha_nacimiento'].'<br>';
+
+        echo $row['idd'].'<center>','<li>','Grado: ';
+        echo $row['grado'].'<br>', '<li>', 'Nombre Del Estudiante: ';
+        echo $row['nombre'].'<br>','<center>','<li>','Apellido Del Estudiante: ';
+        echo $row['apellido'].'<br>','<center>','<li>','No. De Carnet: ';
+        echo $row['no_carnet'].'<br>','<center>','<li>','No. De CUI: ';
+        echo $row['cui'].'<br>','<center>','<li>','Fecha De Nacimiento: ';
+        echo $row['fecha_nacimiento'].'<br>','<br>';
 
 //        echo $row['municipio'].'<br>';
 //        echo $row['departamento'].'<br>';
@@ -221,17 +238,17 @@ if(isset($_GET['enviara'])) {
         while ($row = $consultac->fetch_array()){
 
 
-            echo $row['id'].'<br>';
-            echo $row['nombre'].'<br>';
-            echo $row['apellido'].'<br>';
-            echo $row['codigoid'].'<br>';
-            echo $row['cui'].'<br>';
-            echo $row['email'].'<br>';
-            echo $row['direccion'].'<br>';
-            echo $row['telefono'].'<br>';
-            echo $row['grado'].'<br>';
+            echo $row['idd'].'<center>','<li>','Nombre Del Catedratico: ';
+            echo $row['nombre'].'<br>','<center>','<li>','Apellido Del Catedratico: ';
+            echo $row['apellido'].'<br>','<center>','<li>','Codigo ID Del Catedratico: ';
+            echo $row['codigoid'].'<br>','<center>','<li>','CUI: ';
+            echo $row['cui'].'<br>','<center>','<li>','Email: ';
+            echo $row['email'].'<br>','<center>','<li>','Direccion: ';
+            echo $row['direccion'].'<br>','<center>','<li>','Telefono: ';
+            echo $row['telefono'].'<br>','<center>','<li>','Grado: ';
+            echo $row['grado'].'<br>','<center>','<li>','Departamento: ';
 //            echo $row['municipio'].'<br>';
-            echo $row['departamento'].'<br>';
+            echo $row['departamento'].'<br>','<br>';
 
 
         }
@@ -247,7 +264,17 @@ if(isset($_GET['enviara'])) {
         $consultac = $conn->query("SELECT * FROM catedraticos WHERE apellido LIKE '%$busquedac%'");
 
         while ($row = $consultac->fetch_array()){
-            echo $row['apellido'].'<br>';
+            echo $row['idd'].'<center>','<li>','Apellido Del Catedratico: ';
+            echo $row['apellido'].'<br>','<center>','<li>','Nombre Del Catedratico: ';
+            echo $row['nombre'].'<br>','<center>','<li>','Codigo ID Del Catedratico: ';
+            echo $row['codigoid'].'<br>','<center>','<li>','CUI: ';
+            echo $row['cui'].'<br>','<center>','<li>','Email: ';
+            echo $row['email'].'<br>','<center>','<li>','Direccion: ';
+            echo $row['direccion'].'<br>','<center>','<li>','Telefono: ';
+            echo $row['telefono'].'<br>','<center>','<li>','Grado: ';
+            echo $row['grado'].'<br>','<center>','<li>','Departamento: ';
+//            echo $row['municipio'].'<br>';
+            echo $row['departamento'].'<br>','<br>';
         }
     }
     ?>
@@ -260,19 +287,19 @@ if(isset($_GET['enviara'])) {
         $consultac = $conn->query("SELECT * FROM catedraticos WHERE grado LIKE '%$busquedac%'");
 
         while ($row = $consultac->fetch_array()){
-            echo $row['grado'].'<br>';
 
-            echo $row['id'].'<br>';
-            echo $row['nombre'].'<br>';
-
-            echo $row['codigoid'].'<br>';
-            echo $row['cui'].'<br>';
-            echo $row['email'].'<br>';
-            echo $row['direccion'].'<br>';
-            echo $row['telefono'].'<br>';
+            echo $row['idd'].'<center>','<li>','grado: ';
+            echo $row['grado'].'<br>','<center>','<li>','Nombre Del Catedratico: ';
+            echo $row['nombre'].'<br>','<center>','<li>','Apellido Del Catedratico: ';
+            echo $row['apellido'].'<br>','<center>','<li>','Codigo ID Del Catedratico: ';
+            echo $row['codigoid'].'<br>','<center>','<li>','CUI: ';
+            echo $row['cui'].'<br>','<center>','<li>','Email: ';
+            echo $row['email'].'<br>','<center>','<li>','Direccion: ';
+            echo $row['direccion'].'<br>','<center>','<li>','Telefono: ';
+            echo $row['telefono'].'<br>','<center>','<li>','Departamento: ';
 
 //            echo $row['municipio'].'<br>';
-            echo $row['departamento'].'<br>';
+            echo $row['departamento'].'<br>','<br>';
         }
     }
     ?>
